@@ -1,6 +1,6 @@
 #include "brightener.h"
 
-ImageBrightener::ImageBrightener(std::unique_ptr<Image> inputImage) : m_inputImage(std::move(inputImage)) {
+ImageBrightener::ImageBrightener(std::shared_ptr<Image> inputImage) : m_inputImage(inputImage) {
 }
 
 bool ImageBrightener::ValidateImage()
